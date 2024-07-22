@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Orbitron';
+  font-weight: 1 900,;
+  src: url('../assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format("truetype-variations");
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  @apply font-Orbitron bg-black text-white;
+}
+
+#hero__inner {
+  @apply bg-[url('/images/bg-cyberpunk-city.jpg')] bg-no-repeat md:bg-[100%_auto] bg-[length:100%_80%%] md:bg-[length:100%_80%%];
+}
+
+.bubble-dark {
+  @apply rounded-lg bg-[#454545]/80 px-4 py-1 md:px-9 md:py-2 text-base leading-6 md:text-[20px] md:leading-7 whitespace-nowrap md:whitespace-normal;
+  @apply before:absolute before:content-[''] before:block before:size-3 before:rounded-full before:bg-[#454545] before:top-0 before:-left-5;
+}
+
+.bubble-light {
+  @apply rounded-lg bg-white/70 px-4 py-1 md:px-9 md:py-2 text-base leading-6 md:text-[20px] md:leading-7 text-black whitespace-nowrap md:whitespace-normal;
+  @apply before:absolute before:content-[''] before:block before:size-3 before:rounded-full before:bg-white/70 before:top-0 before:-right-5;
+}
+
+.bubble-dark.bubble--sm {
+  @apply before:size-1.5 before:-left-3;
+}
+
+.bubble-light.bubble--sm {
+  @apply before:size-1.5 before:-right-3;
+}
+
+#cta {
+  @apply bg-[url('/images/bg-cta2.jpg')] bg-no-repeat bg-cover;
+}
+
+.features__background {
+  background: linear-gradient(#fffd54 0%, #edb13e 51.1%, rgb(224, 101, 55) 91%);
+  clip-path: url(#myClip);
+}
+
+.features__background.animated {
+  animation: 7500ms ease-in-out 0ms 1 normal forwards running fillBackground;
+}
+@keyframes fillBackground {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
